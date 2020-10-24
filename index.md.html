@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Apocalisse</title>
+	<script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/apocalisse.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-5" id="img">
+		<img src="assets/img/logo.png" style="width:100%; max-width: 500px;">
+		</div>
+		<div class="col-7">
+			<button id="pulsanteGenera"><em class="fas fa-random"></em> Genera personaggio</button>
+			<!-- <button id="pulsanteStampa"  style="position: absolute; top: 15px; left:820px;"><i class="fas fa-print"></i>  Salva o stampa</button> -->
+		</div>
+	</div>
+
+
+	<div class="row" id="generato" style="display: none">
+		<div class="col-8">
+			<table id="table0">
+				<tr>
+					<th>Nome completo<a class="underscore">_</a></th>
+					<td><p1 id="primoNome"></p1> <p2 id="secondoNome"></p2></td>
+				</tr>
+				<tr>
+					<th>Clade<a class="underscore">_</a></th>
+					<td id="clade"></td>
+				</tr>
+				<tr>
+					<th>Insediamento di nascita<a class="underscore">_</a> &nbsp &nbsp</th>
+					<td id="insediamento"></td>
+				</tr>
+				<tr>
+					<th>Proto-Clade o Regione<a class="underscore">_</a></th>
+					<td id="protoClade"></td>
+				</tr>
+					<th class="noHover" colspan = "2"><hr /></th>
+				<tr>
+					<th>Sesso alla Nascita<a class="underscore">_</a></th>
+					<td id="sex"></td>
+				</tr>
+				<tr>
+					<th>Status Economico<a class="underscore">_</a></th>
+					<td id="status"></td>
+				</tr>
+				<tr>
+					<th>Classe Sociale<a class="underscore">_</a></th>
+					<td id="classeSociale"></td>
+				</tr>
+					<th class="noHover" colspan = "2"><hr /></th>
+				<tr>
+					<tr>
+						<th>Età<a class="underscore">_</a></th>
+						<td id="eta"></td>
+					</tr>
+						<th class="noHover" colspan = "2"><hr /></th>
+					<tr>
+					<th>Corporatura<a class="underscore">_</a></th>
+					<td id="corporatura"></td>
+				</tr>
+				<tr>
+					<th>Statura<a class="underscore">_</a></th>
+					<td><p1 id="statura"></p1> </td>
+				</tr>
+				<tr>
+					<th>Carnagione<a class="underscore">_</a></th>
+					<td id="carnagione"></td>
+				</tr>
+				<tr>
+					<th>Occhi<a class="underscore">_</a></th>
+					<td id="occhi"></td>
+				</tr>
+				<tr>
+					<th>Capelli<a class="underscore">_</a></th>
+					<td id="capelli"></td>
+				</tr>
+			</table>
+			<br>
+			<table id="table0">
+				<tr>
+					<th>Mutazioni<a class="underscore">_</a></th>
+					<td><div class="slot cerchio"> &nbsp </div><p1 id="mutazione1"></p1></td>
+				</tr>
+				<tr>
+					<th><br></th>
+					<td><div class="slot cerchio"> &nbsp </div><p1 id="mutazione2"></p1></td>
+				</tr>
+				<tr>
+					<th><br></th>
+					<td><div class="slot cerchio"> &nbsp </div><p1 id="mutazione3"></p1></td>
+				</tr>
+				<tr>
+					<th><br></th>
+					<td><div class="slot cerchio"> &nbsp </div><p1 id="mutazione4"></p1></td>
+				</tr>
+					<th class="noHover" colspan = "2"><hr /></th>
+				<tr>
+					<th>Mutazioni di Clade<a class="underscore">_</a> &nbsp &nbsp &nbsp &nbsp</th>
+					<td><div class="slot cerchio"> &nbsp </div><p1 id="mutazioneClade1"></p1></td>
+				</tr>
+				<tr>
+					<th><br></th>
+					<td><div class="slot cerchio"> &nbsp </div><p1 id="mutazioneClade2"></p1></td>
+				</tr>
+		</table>
+
+		</div>
+
+
+		<div class="col-4">
+			<table id="table1">
+				<tr>
+					<th class="titoloTabella noHover" colspan = "3">Genitori alla nascita</th>
+				</tr>
+				<tr id="casellaGenitore1">
+					<th id="genitore1">Genitore 1</th>
+					<td id="sessoGenitore1">Sesso</td>
+					<td id="statusGenitore1">Status</td>
+			 	</tr>
+				<tr id="casellaGenitore2">
+					<th id="genitore2">Genitore 2</th>
+					<td id="sessoGenitore2">Sesso</td>
+					<td id="statusGenitore2">Status</td>
+				</tr>
+				<tr id="casellaGenitore3">
+					<th id="genitore3">Genitore 3</th>
+					<td id="sessoGenitore3">Sesso</td>
+					<td id="statusGenitore3">Status</td>
+				</tr>
+				<tr id="casellaGenitore4" style="display:none;">
+					<th id="genitore4">Genitore 4</th>
+					<td id="sessoGenitore4">Sesso</td>
+					<td id="statusGenitore4">Status</td>
+				</tr>
+				<tr id="casellaGenitore5" style="display:none;">
+					<th id="genitore5">Genitore 5</th>
+					<td id="sessoGenitore5">Sesso</td>
+					<td id="statusGenitore5">Status</td>
+				</tr>
+				<tr id="casellaGenitore6" style="display:none;">
+					<th id="genitore6">Genitore 6</th>
+					<td id="sessoGenitore6">Sesso</td>
+					<td id="statusGenitore6">Status</td>
+				</tr>
+				<tr>
+					<th class="noHover" colspan = "3"><hr /></th>
+				</tr>
+				<tr>
+					<th class="titoloTabella noHover" colspan = "3">Fratelli e Sorelle</th>
+				</tr>
+				<tr>
+					<th id="fratelliSorelle" colspan = "3"></th>
+				</tr>
+			</table>
+
+			<br>
+
+			<br>
+
+			<table id="table3">
+				<tr>
+					<th class="titoloTabella noHover" colspan="2">Fenotipi Pre-Orcetici del Personaggio<i class="fas fa-plus"></i></th>
+
+				<tr  class="perChiNarra" style="display:none">
+					<th class="noHover" colspan = "2"><hr /></th>
+				</tr>
+				<tr class="perChiNarra" style="display:none">
+					<th>Fenotipo 1 degli Antenati</th>
+					<td id="fenotipoUno"></td>
+				</tr>
+				<tr class="perChiNarra" style="display:none">
+					<th>Fenotipo 2 degli Antenati</th>
+					<td id="fenotipoDue"></td>
+				</tr>
+				<tr class="perChiNarra" style="display:none">
+					<th>Fenotipo 3 degli Antenati</th>
+					<td id="fenotipoTre"></td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="assets/js/apocalisse.js"></script>
+	<script type="text/javascript" src="assets/js/nomi.js"></script>
+</body>
+</html>
